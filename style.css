@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a :visited {
+    color: #fff;
+}
+
+header {
+    background-color: rgb(130, 69, 148);
+    padding:1rem
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.nav-list a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.nav-list :hover{
+    transition: ease-in-out 0.1s;
+    border-bottom: 5px solid white;
+    font-size: 2rem;
+    color: rgb(209, 158, 158);
+    
+}
+
+.index-main {
+    position:relative;
+    height: 80vh;
+}
+
+.index-main img {
+    width: 35rem;
+    height: 35rem;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid salmon;
+    border-radius: 12px
+}
+
+
+
+.index-main h2 {
+    position:absolute;
+    width: 35rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 1rem;
+    background-color: salmon;
+    color: white;
+    border-radius:12px;
+    text-align: center;
+}
+
+.index-main h2:hover {
+    cursor: pointer;
+    color: black;
+    font-size: 2rem;
+    padding: 0.25rem;
+    transition: ease-in-out 0.1s;
+
+}
+.index-main img :hover {
+    cursor: pointer;
+}
+
+footer {
+    height: 10vh;
+    background-color:rgb(130, 69, 148);
+}
+
+footer p {
+    color: white;
+    position: relative;
+    font-size:2rem;
+    top: 25%;
+    text-align: center;
+    
+}
+.recipes-main {
+    position:relative;
+    height: 80vh;
+}
+
+.recipes-main h2{
+    text-align: center;
+    margin: 1rem;
+    font-size: 5rem;
+}
+
+.recipe-container {
+    display: flex;
+}
+.recipe {
+    display: flex;
+    background-color: rgba(241, 175, 167, 0.473);
+    margin: 1rem;
+    border-radius:12px;
+    padding: 1rem;
+    position: relative;
+}
+
+.recipe img {
+    width: 15rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 3px solid lightblue;
+}
+.recipe-name {
+    font-size: 1.5rem;
+    width: 20%;
+    top: 30%;
+    /* position: absolute; */
+}
+
+.recipe-description{
+    margin: 1rem;
+}
+
+
