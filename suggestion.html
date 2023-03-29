@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe World</title>
+    <title>Recipe World - Suggestion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,12 +16,52 @@
             <li class="nav-list"> <a link href="#">SUGGEST</a></li>
         </ul>
     </header>
-    <div class="index-main">
-        <h2><a href="recipes.html">Featured: Magic Cake</a></h2>
-        <img id="magicCake" src="https://images.pexels.com/photos/10976430/pexels-photo-10976430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="A black cake with yellow icing topped with blueberries and rosemary herb">
-    </div>
-    <footer>
+    
+    <main>
+        <form>
+          <h2>Suggest</h2>
+          <label for="recipe-name">Recipe Name</label>
+          <input type="text" id="recipe-name" name="recipe-name" required>
+      
+          <label for="ingredients">Ingredients</label>
+          <textarea id="ingredients" name="ingredients" required></textarea>
+      
+          <label for="your-name">Your Name</label>
+          <input type="text" id="your-name" name="your-name" required>
+      
+          <label for="your-email">Your Email</label>
+          <input type="email" id="your-email" name="your-email" required>
+      
+          <label>
+            <input type="checkbox" id="agree-tc" name="agree-tc" required> I agree with the <a href="#">Terms and Conditions</a>
+          </label>
+      
+          <button type="submit" id="submit-btn" disabled>Submit</button>
+        </form>
+      </main>
+      
+      <footer>
         <p>Copyright 2023- Recipe World - RousBE</p>
-    </footer>
+      </footer>
+      
+      <script>
+        const checkbox = document.getElementById('agree-tc');
+        const submitBtn = document.getElementById('submit-btn');
+      
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            submitBtn.disabled = false;
+          } else {
+            submitBtn.disabled = true;
+          }
+        });
+      
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          alert('Suggestion Sent!');
+          form.reset();
+        });
+      </script>
 </body>
 </html>

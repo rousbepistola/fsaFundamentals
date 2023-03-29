@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe World</title>
+    <title>Recipe World - Recipes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,27 +21,73 @@
         <h2>Recipes</h2>
         <div class="recipe-container">
             <div class="recipe recipe-1">
-                <p class="recipe-name recipe-1">Magic Cake</p>
                 <img src="https://images.pexels.com/photos/10976430/pexels-photo-10976430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p class="recipe-name recipe-1">Magic Cake</p>
                 <p class="recipe-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, eaque.</p>
+                <div class="recipe-detailed">
+                    <h4>Detailed Recipe</h4>
+                    <p>This is a description of the recipe. this is what we add step by step to bake this amazing cake. for the ingredients you need this:</p>
+                    <ul>
+                        <li>Ingr 1</li>
+                        <li>Ingr 2</li>
+                        <li>Ingr 3</li>
+                    </ul>
+                    <p>Mix it together and bake for 40 mins</p>
+                </div>
             </div>
 
             <div class="recipe recipe-2">
-                <p class="recipe-name recipe-2">Magic Cake 2</p>
                 <img src="https://images.pexels.com/photos/7235675/pexels-photo-7235675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p class="recipe-name recipe-2">Magic Cake 2</p>
                 <p class="recipe-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio beatae quos tempore.</p>
+                <div class="recipe-detailed">
+                    <h4>Detailed Recipe</h4>
+                    <p>This is a description of the recipe. this is what we add step by step to bake this amazing cake. for the ingredients you need this:</p>
+                    <ul>
+                        <li>Ingr 1</li>
+                        <li>Ingr 2</li>
+                        <li>Ingr 3</li>
+                    </ul>
+                    <p>Mix it together and bake for 40 mins</p>
+                </div>
             </div>
 
             <div class="recipe recipe-2">
-                <p class="recipe-name recipe-3">Magic Cake 3</p>
                 <img src="https://images.pexels.com/photos/6210763/pexels-photo-6210763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p class="recipe-name recipe-3">Magic Cake 3</p>
                 <p class="recipe-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam quaerat commodi, maiores veniam perspiciatis!</p>
+                <div class="recipe-detailed">
+                    <h4>Detailed Recipe</h4>
+                    <p>This is a description of the recipe. this is what we add step by step to bake this amazing cake. for the ingredients you need this:</p>
+                    <ul>
+                        <li>Ingr 1</li>
+                        <li>Ingr 2</li>
+                        <li>Ingr 3</li>
+                    </ul>
+                    <p>Mix it together and bake for 40 mins</p>
+                </div>
             </div>
         </div>
     </div>
+
+
     <footer>
         <p>Copyright 2023- Recipe World - RousBE</p>
     </footer>
     
+    <script>
+        // Get all recipe elements
+        const recipes = document.querySelectorAll('.recipe');
+
+        // Add click event listener to each recipe element
+        recipes.forEach(recipe => {
+        recipe.addEventListener('click', () => {
+            console.log('click')
+            // Toggle recipe description and detailed recipe
+            recipe.querySelector('.recipe-description').classList.toggle('hidden');
+            recipe.querySelector('.recipe-detailed').classList.toggle('shown');
+        });
+        });
+    </script>
 </body>
 </html>

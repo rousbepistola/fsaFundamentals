@@ -100,7 +100,7 @@ footer p {
 }
 .recipes-main {
     position:relative;
-    height: 80vh;
+    height: 80%;
 }
 
 .recipes-main h2{
@@ -111,6 +111,7 @@ footer p {
 
 .recipe-container {
     display: flex;
+    flex-direction: column;
 }
 .recipe {
     display: flex;
@@ -123,19 +124,85 @@ footer p {
 
 .recipe img {
     width: 15rem;
-    height: 10rem;
+    height: 15rem;
     border-radius: 50%;
-    border: 3px solid lightblue;
+    border: 3px solid rgb(148, 75, 67);
+    margin:1rem
 }
 .recipe-name {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     width: 20%;
-    top: 30%;
-    /* position: absolute; */
+    bottom: 5%;
+    right: 0%;
+    position: absolute;
+    color: rgb(148, 75, 67);
 }
 
 .recipe-description{
-    margin: 1rem;
+    /* margin: 1rem; */
+    font-size: 2.0em;
 }
 
 
+ .recipe-detailed {
+    display: none;
+    margin: 2rem;
+    font-size: 2.0em;
+    
+}
+
+.recipe-detailed ul {
+    /* list-style-type: none; */
+}
+
+  
+.hidden {
+    display: none !important;
+}
+.shown {
+    display: block !important
+}
+
+main {
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #fcba03;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover:not([disabled]) {
+    background-color: #fbb403;
+  }
