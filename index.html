@@ -17,7 +17,7 @@
         </ul>
     </header>
     <div class="index-main">
-        <h2><a href="recipes.html">Featured: Magic Cake</a></h2>
+        <h2 id="featured-recipe-nav">Featured: Magic Cake</h2>
         <img id="magicCake" src="https://images.pexels.com/photos/10976430/pexels-photo-10976430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="A black cake with yellow icing topped with blueberries and rosemary herb">
     </div>
     <footer>
@@ -26,8 +26,14 @@
 
     <script>
         document.getElementById('magicCake').addEventListener('click', function() {
-          window.location.href = 'recipes.html';
+            localStorage.setItem('sourcePage', 'home');
+            window.location.href = 'recipes.html';
         });
+        document.getElementById('featured-recipe-nav').addEventListener('click',()=>{
+            console.log("i'm clicked")
+            localStorage.setItem('sourcePage', 'home');
+            window.location.href = 'recipes.html';
+        })
     </script>
 </body>
 </html>

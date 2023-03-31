@@ -20,11 +20,11 @@
     <div class="recipes-main">
         <h2>Recipes</h2>
         <div class="recipe-container">
-            <div class="recipe recipe-1">
+            <div class="recipe recipe-1" id="recipe-spotlight">
                 <img src="https://images.pexels.com/photos/10976430/pexels-photo-10976430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 <p class="recipe-name recipe-1">Magic Cake</p>
-                <p class="recipe-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, eaque.</p>
-                <div class="recipe-detailed">
+                <p class="recipe-description" id="recipe-description-highlight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, eaque.</p>
+                <div class="recipe-detailed" id="recipe-detailed-highlight">
                     <h4>Detailed Recipe</h4>
                     <p>This is a description of the recipe. this is what we add step by step to bake this amazing cake. for the ingredients you need this:</p>
                     <ul>
@@ -76,8 +76,23 @@
     </footer>
     
     <script>
+    window.addEventListener("load", () => {
+        let sourcePage = localStorage.getItem('sourcePage');
+
         // Get all recipe elements
         const recipes = document.querySelectorAll('.recipe');
+        let recipeOne = document.getElementById('recipe-spotlight')
+
+        if (sourcePage === 'home') {
+            let description_highlight = document.getElementById('recipe-description-highlight')
+            let detailed_hihlight = document.getElementById('recipe-detailed-highlight')
+            description_highlight && description_highlight.classList.add('hidden')
+            detailed_hihlight && detailed_hihlight.classList.add('shown')
+            recipeOne.classList.toggle('highlight_recipe');
+            localStorage.removeItem('sourcePage')
+        } else {
+            sourcePage && localStorage.removeItem('sourcePage')
+        }
 
         // Add click event listener to each recipe element
         recipes.forEach(recipe => {
@@ -86,8 +101,10 @@
             // Toggle recipe description and detailed recipe
             recipe.querySelector('.recipe-description').classList.toggle('hidden');
             recipe.querySelector('.recipe-detailed').classList.toggle('shown');
+            recipe.classList.toggle('highlight_recipe');
         });
         });
+    });
     </script>
 </body>
 </html>
